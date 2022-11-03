@@ -1,0 +1,470 @@
+@charset "UTF-8";
+
+/*--------------------------------------------------------------
+    TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Settings: used with preprocessors and contain font, colors definitions, etc.
+2.0 - Tools: globally used mixins and functions. Use for preprocessor only.
+3.0 - Generic: reset and/or normalize styles, box-sizing definition, etc. 
+4.0 - Elements: styling for bare/generic HTML elements 
+        - Typography: Headings, Paragraphs, Blockquotes, Anchors
+5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
+        - Framework
+6.0 - Components: specific designed components
+        - NAV
+        -HERO
+        -OPT HOASTING
+        -TEMPLATES
+        -BENEFITES HERO
+        -BENEFITS CONT
+        -HOSTING HERO
+        -DOMAIN
+        -TABLE
+        -FOOTER
+7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+    3.0 - GENERIC
+-------------------------------------------------------------- */
+
+/* ----- UNIVERSAL ----- */
+
+*{
+
+}
+
+html{
+    font-family: 'Source Sans Pro';
+    color: #3F3C45;
+}
+
+/*--------------------------------------------------------------
+    4.0 - ELEMENT
+-------------------------------------------------------------- */
+
+.hero p{
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1,
+h1 ~ p,
+.hero p,
+h2,
+button,
+h3,
+h4,
+header a,
+thead tr:nth-child(2),
+thead tr:last-child{
+    text-transform: uppercase;
+}
+
+h3, 
+h4{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+h1,
+.hero p:first-of-type,
+h2,
+button,
+header a{
+    font-weight: 700;
+}
+
+h1 ~ p,
+span{
+    font-weight: 300;
+}
+
+h1,
+h1 ~ p,
+.hero p,
+button,
+footer{
+    color: #fff;
+}
+
+/* ----- TYPOGRAPHY ----- */
+
+h1,
+.hero p{
+    font-size: 50px;
+    line-height: 71px;
+}
+
+.hero p:last-of-type,
+h1 span{
+    font-size: 30px;
+    line-height: 38px;
+}
+
+h2{
+    font-size: 35px;
+}
+
+section span{
+    font-size: 18px;
+    line-height: 23px;
+}
+
+button{
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+    background:#FE8360;
+}
+
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+      
+}
+
+footer li{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+
+header nav a{
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 23px;
+    color: #fff;
+    text-decoration: none;
+}
+
+i{
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FE8360;
+     
+}
+
+footer i{
+    font-size: 14px;
+    color: #B6BCC7;
+}
+
+thead tr:first-child{
+    font-size: 75px;
+    font-weight: 700;
+}
+
+thead span{
+    font-weight: 300;
+}
+
+thead tr:nth-child(2){
+    font-size: 25px;
+    font-weight: 300;
+    
+}
+
+thead tr:last-child{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22.78px;
+    margin-bottom:100px;
+}
+
+tbody{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;   
+}
+
+/*--------------------------------------------------------------
+    5.0 - OBJECT
+-------------------------------------------------------------- */
+
+/* ----- FRAMEWORK ----- */
+
+.wrapper {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*--------------------------------------------------------------
+    6.0 - COMPONENTS
+-------------------------------------------------------------- */
+
+#template i,
+#ben-con i{
+    padding-right: 40px;
+}
+
+header nav a:hover,
+button:hover
+{
+    background:#51CCF6;    
+}
+
+
+/* ----- NAV ----- */
+
+header li{
+    display: inline-block;
+    list-style: none;
+}
+
+header a{
+    background: #FE8360;
+    padding: 15px 20px;
+    margin: 0;
+    transition: .8s;
+}
+
+header ul{
+    padding: 15px 0;
+    margin: 0;
+    background: #FE8360;
+}
+header .row p{
+    text-align: right;
+}
+
+header .row div:first-child{
+    width: 175px;
+}
+
+header .row div:last-child{
+    width: 325px;
+    padding-top: 50px;
+}
+
+
+/* ----- HERO ----- */
+
+.hero{
+    background: url(../img/laptop.jpg) no-repeat center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+}
+
+.hero > .wrapper{
+    padding: 280px 0 100px 0;
+}
+
+/* ----- OPT HOASTING ----- */
+
+#opt-host{
+    margin-top: 75px;
+    position: relative;
+}
+
+#opt-host i{
+    position: absolute;
+    top: -2px;
+    right: 433px;
+}
+
+#opt-host > div{
+    padding-right: 50px;
+}
+
+button{
+    padding: 15px 20px;
+    border: none;
+    transition: .8s;
+}
+
+/* ----- TEMPLATE ----- */
+
+#template{
+    margin-top: 75px;
+}
+
+#template section div:last-child{
+    padding-right: 40px;
+}
+
+/* ----- BENEFITS HERO----- */
+
+.blue-hero{
+    background-color:#51CCF8;
+    padding: 110px 0 30px 0;
+    margin-bottom: 70px;
+}
+
+/* ----- BENEFITS CONTENT----- */
+
+#ben-con div section div:last-child{
+    width: 250px;
+    padding-right: 40px;
+}
+
+
+#ben-con div section div:first-child{
+    padding-top: 20px;
+}
+
+#ben-con .row{
+    align-items: flex-start ;
+}
+
+#ben-con div:first-child{
+    margin-bottom: 40px;
+}
+
+/* ----- HOSTING HERO----- */
+
+.orange-hero{
+    background-color:#FE8360;
+    padding: 110px 0 30px 0;
+}
+
+
+
+/* ----- DOMAIN ----- */
+
+#domain{
+    background-color: #E7F5F8;
+    padding: 40px 0 60px 0;
+}
+
+#domain i{
+    font-size: 20px;
+}
+
+#domain h2{
+    margin: 0;
+}
+
+input{
+    width: 350px;
+    padding: 13px 10px;
+}
+
+select{
+    width: 100px;
+    padding: 12px 10px;
+}
+
+form button{
+    width: 200px ;
+}
+
+/* ----- TABLE----- */
+
+table{
+    margin: 0 auto;
+    margin-top: 70px;
+    border: 1px solid #E0DFE1;
+    text-align: center;
+    width: 1024px;
+    padding: 40px 0 30px 0;
+}
+
+caption{
+    display: none;
+}
+
+tbody td{
+    border-bottom: 1px solid #E0DFE1;
+    padding: 13px 0;
+}
+
+tbody tr:last-child td{
+    border: none;
+}
+
+tfoot td{
+    padding:50px 0 0 0 ;
+}
+
+table button{
+    width: 200px;
+}
+
+th button{
+    background: #51CCF8;
+}
+
+tbody tr:first-child td{
+    padding-top: 50px;
+}
+
+/* ----- FOOTER ----- */
+
+footer{
+    background-color:#4D515C ;
+    padding: 30px 0 40px 0;
+    margin: 60px 0 0 0;
+}
+
+footer div div{
+    padding-right: 110px;
+}
+
+footer .row{
+    justify-content: flex-start;
+    align-items: flex-start ;
+}
+
+footer a{
+    text-decoration: none;
+    color: #B6BCC7;
+}
+
+footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+h4{
+    margin: 20px 0 12px 0 ;
+}
+
+footer div div:last-child li{
+    display: inline-block;
+    padding-right: 24px;
+}
+
+footer a:hover{
+    color: #fff;
+}
+
+footer i:hover{
+    color: #fff;
+}
+/*--------------------------------------------------------------
+    7.0 - UTILITY
+-------------------------------------------------------------- */
+
+
+
+
+
+
+
+
